@@ -7,12 +7,16 @@
       "RelativeMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|solutionrelative:trabalhopoo\\views\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|c:\\users\\joelo_k10i33y\\desktop\\trabalhopoo_novo\\trabalhopoo\\views\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|solutionrelative:trabalhopoo\\views\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|c:\\users\\joelo_k10i33y\\desktop\\trabalhopoo_novo\\trabalhopoo\\controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|solutionrelative:trabalhopoo\\controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|c:\\users\\joelo_k10i33y\\desktop\\trabalhopoo_novo\\trabalhopoo\\views\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|solutionrelative:trabalhopoo\\views\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|c:\\users\\joelo_k10i33y\\desktop\\trabalhopoo_novo\\trabalhopoo\\views\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|solutionrelative:trabalhopoo\\views\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|c:\\users\\joelo_k10i33y\\desktop\\trabalhopoo_novo\\trabalhopoo\\models\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,8 +30,29 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Views\\LoginForm.cs",
+              "RelativeDocumentMoniker": "TrabalhoPOO\\Views\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Views\\LoginForm.cs",
+              "RelativeToolTip": "TrabalhoPOO\\Views\\LoginForm.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCoAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T18:54:53.39Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -36,27 +61,27 @@
               "RelativeDocumentMoniker": "TrabalhoPOO\\Views\\AdminForm.cs",
               "ToolTip": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Views\\AdminForm.cs",
               "RelativeToolTip": "TrabalhoPOO\\Views\\AdminForm.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAiwBcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-03T18:53:13.904Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "RegisterController.cs",
               "DocumentMoniker": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Controllers\\RegisterController.cs",
               "RelativeDocumentMoniker": "TrabalhoPOO\\Controllers\\RegisterController.cs",
               "ToolTip": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Controllers\\RegisterController.cs",
               "RelativeToolTip": "TrabalhoPOO\\Controllers\\RegisterController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBMAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-03T17:31:47.791Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "RegisterModel.cs",
               "DocumentMoniker": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Models\\RegisterModel.cs",
               "RelativeDocumentMoniker": "TrabalhoPOO\\Models\\RegisterModel.cs",
@@ -69,24 +94,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Register.cs",
               "DocumentMoniker": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Views\\Register.cs",
               "RelativeDocumentMoniker": "TrabalhoPOO\\Views\\Register.cs",
               "ToolTip": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Views\\Register.cs",
               "RelativeToolTip": "TrabalhoPOO\\Views\\Register.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwC8AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwC8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-03T17:23:54.212Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             }
           ]
         }
