@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using TrabalhoPOO.Views;
 using Microsoft.Data.SqlClient;
+
 namespace TrabalhoPOO.Controllers
 {
     public class LoginController

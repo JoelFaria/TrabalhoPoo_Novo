@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
-using TrabalhoPOO;
+using TrabalhoPOO.Controllers;
+
 
 namespace TrabalhoPOO.Views
 {
@@ -18,6 +19,7 @@ namespace TrabalhoPOO.Views
             InitializeComponent();
         }
 
+        LoginController loginController = new LoginController();
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -28,7 +30,7 @@ namespace TrabalhoPOO.Views
             string username = txtUser.Text;
             string password = txtPass.Text;
 
-            if (VerifyLogin(username, password))
+            if (loginController.ValidateUser(username, password))
             {
                 MessageBox.Show("Login bem-sucedido!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -58,7 +60,7 @@ namespace TrabalhoPOO.Views
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Forms2 forms2 = new Forms2();
+            Register forms2 = new Register();
             forms2.Show();
             this.Hide();
 

@@ -1,4 +1,4 @@
-﻿namespace TrabalhoPOOwinforms
+﻿namespace TrabalhoPOO.Views
 {
     partial class Login
     {
