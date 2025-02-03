@@ -17,7 +17,7 @@ namespace TrabalhoPOO.Views
         private string selectedProduct; // Produto selecionado
         private int selectedProductId; // ID do produto selecionado
         private List<string> carrinho = new List<string>(); // Lista de itens no carrinho
-        Login
+   
 
 
         private void LoadData()

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 using TrabalhoPOO.Controllers;
+using TrabalhoPOO.Models;
 
 
 namespace TrabalhoPOO.Views
@@ -19,18 +20,21 @@ namespace TrabalhoPOO.Views
             InitializeComponent();
         }
 
-        LoginController loginController = new LoginController();
-
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             txtPass.PasswordChar = checkBox1.Checked ? '\0' : '*';
         }
         private void button1_Click(object sender, EventArgs e)
         {
+
             string username = txtUser.Text;
             string password = txtPass.Text;
 
-            if (loginController.ValidateUser(username, password))
+            LoginController loginController = new LoginController();
+            bool isValid = loginController.ValidateUser(username, password);
+
+
+            if (isValid)
             {
                 MessageBox.Show("Login bem-sucedido!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

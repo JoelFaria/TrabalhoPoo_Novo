@@ -7,3 +7,6 @@ C:\Users\joelo_k10i33y\Desktop\TrabalhoPoo_Novo\TrabalhoPOO\obj\Debug\net8.0-win
 C:\Users\joelo_k10i33y\Desktop\TrabalhoPoo_Novo\TrabalhoPOO\obj\Debug\net8.0-windows\TrabalhoPOO.AssemblyInfo.cs
 C:\Users\joelo_k10i33y\Desktop\TrabalhoPoo_Novo\TrabalhoPOO\obj\Debug\net8.0-windows\TrabalhoPOO.csproj.CoreCompileInputs.cache
 C:\Users\joelo_k10i33y\Desktop\TrabalhoPoo_Novo\TrabalhoPOO\obj\Debug\net8.0-windows\TrabalhoPOO.sourcelink.json
+C:\Users\joelo_k10i33y\Desktop\TrabalhoPoo_Novo\TrabalhoPOO\obj\Debug\net8.0-windows\TrabalhoPOO.Views.AdminForm.resources
+C:\Users\joelo_k10i33y\Desktop\TrabalhoPoo_Novo\TrabalhoPOO\obj\Debug\net8.0-windows\TrabalhoPOO.Views.Items.resources
+C:\Users\joelo_k10i33y\Desktop\TrabalhoPoo_Novo\TrabalhoPOO\obj\Debug\net8.0-windows\TrabalhoPOO.Views.Register.resources
