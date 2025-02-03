@@ -1,0 +1,9 @@
+C:\Users\joelo_k10i33y\Desktop\TrabalhoPoo_Novo\TrabalhoPOO\obj\Debug\net8.0-windows\TrabalhoPOO.csproj.AssemblyReference.cache
+C:\Users\joelo_k10i33y\Desktop\TrabalhoPoo_Novo\TrabalhoPOO\obj\Debug\net8.0-windows\TrabalhoPOO.Form1.resources
+C:\Users\joelo_k10i33y\Desktop\TrabalhoPoo_Novo\TrabalhoPOO\obj\Debug\net8.0-windows\TrabalhoPOO.Views.Login.resources
+C:\Users\joelo_k10i33y\Desktop\TrabalhoPoo_Novo\TrabalhoPOO\obj\Debug\net8.0-windows\TrabalhoPOO.csproj.GenerateResource.cache
+C:\Users\joelo_k10i33y\Desktop\TrabalhoPoo_Novo\TrabalhoPOO\obj\Debug\net8.0-windows\TrabalhoPOO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joelo_k10i33y\Desktop\TrabalhoPoo_Novo\TrabalhoPOO\obj\Debug\net8.0-windows\TrabalhoPOO.AssemblyInfoInputs.cache
+C:\Users\joelo_k10i33y\Desktop\TrabalhoPoo_Novo\TrabalhoPOO\obj\Debug\net8.0-windows\TrabalhoPOO.AssemblyInfo.cs
+C:\Users\joelo_k10i33y\Desktop\TrabalhoPoo_Novo\TrabalhoPOO\obj\Debug\net8.0-windows\TrabalhoPOO.csproj.CoreCompileInputs.cache
+C:\Users\joelo_k10i33y\Desktop\TrabalhoPoo_Novo\TrabalhoPOO\obj\Debug\net8.0-windows\TrabalhoPOO.sourcelink.json
