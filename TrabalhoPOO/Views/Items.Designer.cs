@@ -66,7 +66,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.Desenho_PC_PNG;
+            //pictureBox1.Image = Properties.Resources.Desenho_PC_PNG;
             pictureBox1.Location = new Point(38, 56);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(170, 163);

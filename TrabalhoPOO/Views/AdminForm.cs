@@ -13,6 +13,7 @@ namespace TrabalhoPOO.Views
     {
 
         private ProductController produtoController;
+        private LoadProducts LoadProducts;
 
         public AdminForm()
         {
@@ -27,7 +28,8 @@ namespace TrabalhoPOO.Views
 
             HideFields();
 
-            LoadStockData();
+            LoadProducts.LoadStockData();
+
         }
 
 
@@ -115,7 +117,7 @@ namespace TrabalhoPOO.Views
                 if (sucesso)
                 {
                     MessageBox.Show("Produto adicionado com sucesso!");
-                    LoadStockData(); // Atualiza a interface com os dados do estoque
+                    LoadProducts.LoadStockData(); // Atualiza a interface com os dados do estoque
                 }
                 else
                 {
@@ -137,95 +139,7 @@ namespace TrabalhoPOO.Views
         /// <param name="e">Os dados do evento.</param>
         private void button1_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(textId.Text);
-
-            // Verificar o tipo de produto selecionado e instanciar o objeto correto
-            Produto produto;
-
-            // Verificar o tipo do produto a partir do ComboBox
-            if (comboBox1.SelectedItem.ToString() == "GPU")
-            {
-                produto = new Gpu(
-                    vram: int.Parse(textVRAM.Text),
-                    baseClock: int.Parse(textBaseClock.Text),
-                    boostClock: int.Parse(textBoostClock.Text),
-                    nome: textName.Text,
-                    descricao: textDescription.Text,
-                    preco: double.Parse(textPrice.Text),
-                    cat: comboBox1.SelectedItem?.ToString() ?? string.Empty,
-                    stock: int.Parse(textStock.Text),
-                    marca: textBrand.Text,
-                    garantia: int.Parse(textGuarantee.Text)
-                );
-            }
-            else if (comboBox1.SelectedItem.ToString() == "CPU")
-            {
-                produto = new Cpu(
-                    cache: int.Parse(textCache.Text),
-                    socket: textSocket.Text,
-                    memorySupport: textMem.Text,
-                    frequency: int.Parse(textFrequency.Text),
-                    nome: textName.Text,
-                    descricao: textDescription.Text,
-                    preco: double.Parse(textPrice.Text),
-                    cat: comboBox1.SelectedItem?.ToString() ?? string.Empty,
-                    stock: int.Parse(textStock.Text),
-                    marca: textBrand.Text,
-                    garantia: int.Parse(textGuarantee.Text)
-                );
-            }
-            else if (comboBox1.SelectedItem.ToString() == "Motherboard")
-            {
-                produto = new Motherboard(
-                    socket: textSocketMB.Text,
-                    memorySupport: textMemorySupport.Text,
-                    formFactor: textFormFactor.Text,
-                    nome: textName.Text,
-                    descricao: textDescription.Text,
-                    preco: double.Parse(textPrice.Text),
-                    cat: comboBox1.SelectedItem?.ToString() ?? string.Empty,
-                    stock: int.Parse(textStock.Text),
-                    marca: textBrand.Text,
-                    garantia: int.Parse(textGuarantee.Text)
-                );
-            }
-            else if (comboBox1.SelectedItem.ToString() == "RAM")
-            {
-                produto = new RAM(
-                    frequency: int.Parse(textFrequencyRAM.Text),
-                    capacity: int.Parse(textCapacity.Text),
-                    type: textType.Text,
-                    latency: int.Parse(textLatency.Text),
-                    nome: textName.Text,
-                    descricao: textDescription.Text,
-                    preco: double.Parse(textPrice.Text),
-                    cat: comboBox1.SelectedItem?.ToString() ?? string.Empty,
-                    stock: int.Parse(textStock.Text),
-                    marca: textBrand.Text,
-                    garantia: int.Parse(textGuarantee.Text)
-                );
-            }
-            else
-            {
-                // Exibe uma mensagem se o tipo de produto não for selecionado ou for inválido
-                MessageBox.Show("Tipo de produto não selecionado ou inválido.");
-                return;
-            }
-
-            // Atualiza o produto no banco de dados
-            bool sucesso = a.UpdateProduct(produto, id);
-
-            if (sucesso)
-            {
-                // Exibe uma mensagem de sucesso e recarrega os dados do estoque
-                MessageBox.Show("Produto atualizado com sucesso!");
-                LoadStockData();
-            }
-            else
-            {
-                // Exibe uma mensagem de erro se a atualização falhar
-                MessageBox.Show("Erro ao atualizar produto.");
-            }
+           
         }
 
         /// <summary>
@@ -235,23 +149,7 @@ namespace TrabalhoPOO.Views
         /// <param name="e">Os dados do evento.</param>
         private void button3_Click(object sender, EventArgs e)
         {
-            try
-            {
-                int id = int.Parse(textId.Text); // Pega o Id do produto da caixa de texto
-                bool sucesso = a.DeleteProduct(id);
-
-                if (sucesso)
-                {
-                    // Exibe uma mensagem de sucesso e recarrega os dados do estoque
-                    MessageBox.Show("Produto eliminado com sucesso!");
-                    LoadStockData(); // Recarrega os dados para refletir a exclusão
-                }
-            }
-            catch (Exception ex)
-            {
-                // Exibe uma mensagem de erro se ocorrer um problema ao eliminar o produto
-                MessageBox.Show($"Erro: {ex.Message}");
-            }
+            
         }
 
         #endregion
@@ -361,27 +259,8 @@ namespace TrabalhoPOO.Views
         /// Método para carregar os dados do estoque
         /// </summary>
 
-        private void LoadStockData()
-        {
-            string query = "SELECT * FROM StockTable";
-
-            using (SqlConnection con = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    con.Open();
-                    SqlDataAdapter adapter = new SqlDataAdapter(query, con);
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-                    dataGridView1.DataSource = dataTable; // Exibe os dados no DataGridView
-                }
-                catch (Exception ex)
-                {
-                    // Exibe uma mensagem de erro se ocorrer um problema ao carregar os dados
-                    MessageBox.Show("Erro ao carregar dados: " + ex.Message);
-                }
-            }
-        }
+        
+        
         /// <summary>
         /// Método para carregar os detalhes de uma GPU
         /// </summary>
@@ -389,22 +268,7 @@ namespace TrabalhoPOO.Views
       
         private void LoadGpuDetails(int productId)
         {
-            using (SqlConnection con = new SqlConnection(connectionString))
-            {
-                string query = "SELECT VRAM, BaseClock, OverClock FROM Gpu WHERE ProductId = @ProductId";
-                SqlCommand cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("@ProductId", productId);
-
-                con.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    // Preenche os campos de texto com os detalhes da GPU
-                    textVRAM.Text = reader["VRAM"].ToString();
-                    textBaseClock.Text = reader["BaseClock"].ToString();
-                    textBoostClock.Text = reader["OverClock"].ToString();
-                }
-            }
+          
         }
 
         /// <summary>
@@ -414,23 +278,7 @@ namespace TrabalhoPOO.Views
 
         private void LoadCpuDetails(int productId)
         {
-            using (SqlConnection con = new SqlConnection(connectionString))
-            {
-                string query = "SELECT Cache, Socket, MemorySupport, Frequency FROM Cpu WHERE ProductId = @ProductId";
-                SqlCommand cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("@ProductId", productId);
-
-                con.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    // Preenche os campos de texto com os detalhes da CPU
-                    textCache.Text = reader["Cache"].ToString();
-                    textSocket.Text = reader["Socket"].ToString();
-                    textMem.Text = reader["MemorySupport"].ToString();
-                    textFrequency.Text = reader["Frequency"].ToString();
-                }
-            }
+            
         }
         /// <summary>
         /// Método para carregar os detalhes de uma placa-mãe
@@ -439,22 +287,7 @@ namespace TrabalhoPOO.Views
 
         private void LoadMotherboardDetails(int productId)
         {
-            using (SqlConnection con = new SqlConnection(connectionString))
-            {
-                string query = "SELECT Socket, MemorySupport, FormFactor FROM Motherboard WHERE ProductId = @ProductId";
-                SqlCommand cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("@ProductId", productId);
-
-                con.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    // Preenche os campos de texto com os detalhes da placa-mãe
-                    textSocketMB.Text = reader["Socket"].ToString();
-                    textMemorySupport.Text = reader["MemorySupport"].ToString();
-                    textFormFactor.Text = reader["FormFactor"].ToString();
-                }
-            }
+           
         }
         /// <summary>
         /// Método para carregar os detalhes de uma RAM
@@ -462,23 +295,7 @@ namespace TrabalhoPOO.Views
         /// <param name="productId"></param>
         private void LoadRamDetails(int productId)
         {
-            using (SqlConnection con = new SqlConnection(connectionString))
-            {
-                string query = "SELECT Frequency, Capacity, Type, Latency FROM Ram WHERE ProductId = @ProductId";
-                SqlCommand cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("@ProductId", productId);
-
-                con.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    // Preenche os campos de texto com os detalhes da RAM
-                    textFrequencyRAM.Text = reader["Frequency"].ToString();
-                    textCapacity.Text = reader["Capacity"].ToString();
-                    textType.Text = reader["Type"].ToString();
-                    textLatency.Text = reader["Latency"].ToString();
-                }
-            }
+           
         }
 
         /// <summary>
@@ -488,42 +305,7 @@ namespace TrabalhoPOO.Views
         /// <param name="e"></param>
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) // Ignora cabeçalhos
-            {
-                DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
-
-                // Preenche os campos de texto com os dados comuns do produto
-                textId.Text = selectedRow.Cells["id"].Value.ToString();
-                textName.Text = selectedRow.Cells["name"].Value.ToString();
-                textDescription.Text = selectedRow.Cells["description"].Value.ToString();
-                textPrice.Text = selectedRow.Cells["price"].Value.ToString();
-                textStock.Text = selectedRow.Cells["stock"].Value.ToString();
-                textBrand.Text = selectedRow.Cells["brand"].Value.ToString();
-                textGuarantee.Text = selectedRow.Cells["guarantee"].Value.ToString();
-                comboBox1.SelectedItem = selectedRow.Cells["type"].Value.ToString();
-
-                // Identifica o tipo de produto
-                string productType = selectedRow.Cells["type"].Value.ToString();
-                int productId = int.Parse(textId.Text);
-
-                // Carrega os detalhes adicionais com base no tipo de produto
-                if (productType.ToLower() == "gpu")
-                {
-                    LoadGpuDetails(productId);
-                }
-                else if (productType.ToLower() == "cpu")
-                {
-                    LoadCpuDetails(productId);
-                }
-                else if (productType.ToLower() == "motherboard")
-                {
-                    LoadMotherboardDetails(productId);
-                }
-                else if (productType.ToLower() == "ram")
-                {
-                    LoadRamDetails(productId);
-                }
-            }
+            
         }
 
         #endregion

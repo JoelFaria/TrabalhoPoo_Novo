@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Identity.Client;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -13,27 +14,14 @@ namespace TrabalhoPOO.Controllers
 
     public class StockController
     {
-        private LoadProducts load;
-        private StockView stockView;
+        private LoadProducts loadProducts;
 
-        public StockController(StockView view)
+        public StockController()
         {
-            this.stockView = view;
-            this.productRepository = new ProductRepository();
+            loadProducts = new LoadProducts();
         }
 
-        public void LoadProductDetails(int productId)
-        {
-            Produto produto = productRepository.GetProductById(productId);
-
-            if (produto != null)
-            {
-                stockView.SetProductDetails(produto);
-            }
-            else
-            {
-                MessageBox.Show("Produto não encontrado.");
-            }
-        }
+        
+        
     }
 }
