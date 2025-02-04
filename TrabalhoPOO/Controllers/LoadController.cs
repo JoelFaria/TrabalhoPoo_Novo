@@ -10,22 +10,30 @@ using TrabalhoPOO.Views;
 
 namespace TrabalhoPOO.Controllers
 {
-    public class LoadController
+
+    public class StockController
     {
         private LoadProducts load;
+        private StockView stockView;
 
-        public ProductController()
+        public StockController(StockView view)
         {
-            this.load = new LoadProducts();
+            this.stockView = view;
+            this.productRepository = new ProductRepository();
         }
 
-        public DataTable GetStockTable() 
+        public void LoadProductDetails(int productId)
         {
-            return load.GetAllStock();
-        }
-        public DataRow GetGpuDetails(int productId)
-        {
-            return load.GetGpuDetails(productId);
+            Produto produto = productRepository.GetProductById(productId);
+
+            if (produto != null)
+            {
+                stockView.SetProductDetails(produto);
+            }
+            else
+            {
+                MessageBox.Show("Produto não encontrado.");
+            }
         }
     }
 }
