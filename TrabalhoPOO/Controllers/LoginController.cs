@@ -14,7 +14,7 @@ namespace TrabalhoPOO.Controllers
 
         public LoginController()
         {
-            loginModel = new LoginModel();
+            this.loginModel = new LoginModel();
         }
 
         public bool ValidateUser(string username, string password)

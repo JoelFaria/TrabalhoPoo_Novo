@@ -2,13 +2,18 @@
 using System.Data;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
+using TrabalhoPOO.Models;
 using TrabalhoPOO;
+using TrabalhoPOO.Controllers;
 
 namespace TrabalhoPOO.Views
 {
 
     public partial class AdminForm : Form
     {
+
+        private ProductController produtoController;
+
         public AdminForm()
         {
             InitializeComponent();
@@ -18,13 +23,13 @@ namespace TrabalhoPOO.Views
             comboBox1.Items.Add("RAM");
             comboBox1.Items.Add("Motherboard");
 
+            produtoController = new ProductController();
+
             HideFields();
 
             LoadStockData();
         }
 
-        Funcoes1 a = new Funcoes1();
-        string connectionString = "Data Source=JOELFARIA\\SQLEXPRESS;Initial Catalog=LoginApp;Integrated Security=True;TrustServerCertificate=True";
 
         #region Login
 
@@ -40,113 +45,7 @@ namespace TrabalhoPOO.Views
 
         #region Metodo de salvar produtos
 
-        // Método para salvar uma GPU
-        public void SaveGPU()
-        {
-            Gpu gpu = new Gpu(
-                vram: int.Parse(textVRAM.Text),
-                baseClock: int.Parse(textBaseClock.Text),
-                boostClock: int.Parse(textBoostClock.Text),
-                nome: textName.Text,
-                descricao: textDescription.Text,
-                preco: double.Parse(textPrice.Text),
-                cat: comboBox1.SelectedItem?.ToString() ?? string.Empty,
-                stock: int.Parse(textStock.Text),
-                marca: textBrand.Text,
-                garantia: int.Parse(textGuarantee.Text)
-            );
-            // Adiciona a nova GPU ao banco de dados
-            a.AddNewProduct(gpu);
-        }
-
-        // Método para salvar uma CPU
-        public void SaveCPU()
-        {
-            Cpu cpu = new Cpu(
-                cache: int.Parse(textCache.Text),
-                socket: textSocket.Text,
-                memorySupport: textMem.Text,
-                frequency: int.Parse(textFrequency.Text),
-                nome: textName.Text,
-                descricao: textDescription.Text,
-                preco: double.Parse(textPrice.Text),
-                cat: comboBox1.SelectedItem?.ToString() ?? string.Empty,
-                stock: int.Parse(textStock.Text),
-                marca: textBrand.Text,
-                garantia: int.Parse(textGuarantee.Text)
-            );
-            // Adiciona a nova CPU ao banco de dados
-            a.AddNewProduct(cpu);
-        }
-
-        // Método para salvar uma placa-mãe
-        public void SaveMotherboard()
-        {
-            Motherboard motherboard = new Motherboard(
-                socket: textSocketMB.Text,
-                memorySupport: textMemorySupport.Text,
-                formFactor: textFormFactor.Text,
-                nome: textName.Text,
-                descricao: textDescription.Text,
-                preco: double.Parse(textPrice.Text),
-                cat: comboBox1.SelectedItem?.ToString() ?? string.Empty,
-                stock: int.Parse(textStock.Text),
-                marca: textBrand.Text,
-                garantia: int.Parse(textGuarantee.Text)
-            );
-            // Adiciona a nova placa-mãe ao banco de dados
-            a.AddNewProduct(motherboard);
-        }
-
-        // Método para salvar uma RAM
-        public void SaveRAM()
-        {
-            RAM ram = new RAM(
-                frequency: int.Parse(textFrequencyRAM.Text),
-                capacity: int.Parse(textCapacity.Text),
-                type: textType.Text,
-                latency: int.Parse(textLatency.Text),
-                nome: textName.Text,
-                descricao: textDescription.Text,
-                preco: double.Parse(textPrice.Text),
-                cat: comboBox1.SelectedItem?.ToString() ?? string.Empty,
-                stock: int.Parse(textStock.Text),
-                marca: textBrand.Text,
-                garantia: int.Parse(textGuarantee.Text)
-            );
-            // Adiciona a nova RAM ao banco de dados
-            a.AddNewProduct(ram);
-        }
-
-        // Método para salvar um produto com base no tipo selecionado
-        public void SaveProduct()
-        {
-            string SelectedItem = comboBox1.SelectedItem.ToString();
-
-            switch (SelectedItem)
-            {
-                case "GPU":
-                    SaveGPU();
-                    break;
-
-                case "CPU":
-                    SaveCPU();
-                    break;
-
-                case "Motherboard":
-                    SaveMotherboard();
-                    break;
-
-                case "RAM":
-                    SaveRAM();
-                    break;
-
-                default:
-                    // Exibe uma mensagem se nenhum tipo de produto for selecionado
-                    MessageBox.Show("Selecione um tipo de produto.");
-                    break;
-            }
-        }
+       
 
         /// <summary>
         /// Manipula o evento de clique do botão 2. 
@@ -158,15 +57,74 @@ namespace TrabalhoPOO.Views
         {
             try
             {
-                // Salva o produto no banco de dados
-                SaveProduct();
-                // Carrega os dados do estoque para atualizar a interface
-                LoadStockData();
+                string tipo = comboBox1.SelectedItem?.ToString();
+
+                if (string.IsNullOrEmpty(tipo)) 
+                {
+                    MessageBox.Show("Selecione um tipo de produto.");
+                }
+
+                string nome = textName.Text;
+                string descricao = textDescription.Text;
+                double preco = double.Parse(textPrice.Text);
+                int stock = int.Parse(textStock.Text);
+                string marca = textBrand.Text;
+                int garantia = int.Parse(textGuarantee.Text);
+
+
+                bool sucesso = false;
+
+                switch (tipo.ToLower())
+                {
+                    case "gpu":
+                        int vram = int.Parse(textVRAM.Text);
+                        int baseclock = int.Parse(textBaseClock.Text);
+                        int boostclock = int.Parse(textBoostClock.Text);
+                        Gpu gpu = new Gpu(vram, baseclock, boostclock, nome, descricao, preco, tipo, stock, marca, garantia);
+                        sucesso = produtoController.AddNewProduct(gpu);
+
+                        break;
+
+                    case "cpu":
+                        int cache = int.Parse(textCache.Text);
+                        string socket = textSocket.Text;
+                        string memorySupport = textMem.Text;
+                        int frequency = int.Parse(textFrequency.Text);
+                        Cpu cpu = new Cpu(cache, socket, memorySupport, frequency, nome, descricao, preco, tipo, stock, marca, garantia);
+                        sucesso = produtoController.AddNewProduct(cpu);
+                        break;
+
+                    case "motherboard":
+                        string socketMB = textSocketMB.Text;
+                        string memorySupportMB = textMemorySupport.Text;
+                        string formFactor = textFormFactor.Text;
+                        Motherboard motherboard = new Motherboard(socketMB, memorySupportMB, formFactor, nome, descricao, preco, tipo, stock, marca, garantia);
+                        sucesso = produtoController.AddNewProduct(motherboard);
+                        break;
+
+                    case "ram":
+                        int capacity = int.Parse(textCapacity.Text);
+                        string typeRam = textType.Text;
+                        int frequencyRam = int.Parse(textFrequencyRAM.Text);
+                        int latency = int.Parse(textLatency.Text);
+                        RAM ram = new RAM(capacity, typeRam, frequencyRam, latency, nome, descricao, preco, tipo, stock, marca, garantia);
+                        sucesso = produtoController.AddNewProduct(ram);
+                        break;
+                }
+
+                if (sucesso)
+                {
+                    MessageBox.Show("Produto adicionado com sucesso!");
+                    LoadStockData(); // Atualiza a interface com os dados do estoque
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao adicionar produto.");
+                }
             }
             catch (Exception ex)
             {
-                // Exibe uma mensagem de erro se ocorrer um problema ao adicionar o produto
-                MessageBox.Show("Erro ao adicionar produto.", ex.Message);
+                MessageBox.Show("Erro: " + ex.Message);
             }
         }
 

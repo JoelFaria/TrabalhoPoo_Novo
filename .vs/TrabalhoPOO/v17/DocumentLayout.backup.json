@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|c:\\users\\joelo_k10i33y\\desktop\\trabalhopoo_novo\\trabalhopoo\\views\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|solutionrelative:trabalhopoo\\views\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|c:\\users\\joelo_k10i33y\\desktop\\trabalhopoo_novo\\trabalhopoo\\views\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|solutionrelative:trabalhopoo\\views\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|c:\\users\\joelo_k10i33y\\desktop\\trabalhopoo_novo\\trabalhopoo\\controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|solutionrelative:trabalhopoo\\controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|c:\\users\\joelo_k10i33y\\desktop\\trabalhopoo_novo\\trabalhopoo\\views\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|solutionrelative:trabalhopoo\\views\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|c:\\users\\joelo_k10i33y\\desktop\\trabalhopoo_novo\\trabalhopoo\\views\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|c:\\users\\joelo_k10i33y\\desktop\\trabalhopoo_novo\\trabalhopoo\\models\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|solutionrelative:trabalhopoo\\models\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|c:\\users\\joelo_k10i33y\\desktop\\trabalhopoo_novo\\trabalhopoo\\views\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|solutionrelative:trabalhopoo\\views\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,26 +42,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "LoginForm.cs",
               "DocumentMoniker": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Views\\LoginForm.cs",
               "RelativeDocumentMoniker": "TrabalhoPOO\\Views\\LoginForm.cs",
               "ToolTip": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Views\\LoginForm.cs",
               "RelativeToolTip": "TrabalhoPOO\\Views\\LoginForm.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwCsAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCoAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-03T18:54:53.39Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "AdminForm.cs",
               "DocumentMoniker": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Views\\AdminForm.cs",
               "RelativeDocumentMoniker": "TrabalhoPOO\\Views\\AdminForm.cs",
               "ToolTip": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Views\\AdminForm.cs",
               "RelativeToolTip": "TrabalhoPOO\\Views\\AdminForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAiwBcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-03T18:53:13.904Z",
               "EditorCaption": ""
@@ -74,14 +74,14 @@
               "RelativeDocumentMoniker": "TrabalhoPOO\\Controllers\\RegisterController.cs",
               "ToolTip": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Controllers\\RegisterController.cs",
               "RelativeToolTip": "TrabalhoPOO\\Controllers\\RegisterController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBMAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-03T17:31:47.791Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "RegisterModel.cs",
               "DocumentMoniker": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Models\\RegisterModel.cs",
               "RelativeDocumentMoniker": "TrabalhoPOO\\Models\\RegisterModel.cs",
@@ -94,7 +94,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Register.cs",
               "DocumentMoniker": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Views\\Register.cs",
               "RelativeDocumentMoniker": "TrabalhoPOO\\Views\\Register.cs",

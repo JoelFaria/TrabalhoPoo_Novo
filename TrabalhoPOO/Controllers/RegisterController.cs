@@ -13,7 +13,7 @@ namespace TrabalhoPOO.Controllers
 
         public RegisterController()
         {
-            registerModel = new RegisterModel();
+            this.registerModel = new RegisterModel();
         }
         public bool RegisterUser(User user)
         {
