@@ -3,24 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|c:\\users\\joelo_k10i33y\\desktop\\trabalhopoo_novo\\trabalhopoo\\models\\loadproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|solutionrelative:trabalhopoo\\models\\loadproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|c:\\users\\joelo_k10i33y\\desktop\\trabalhopoo_novo\\trabalhopoo\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|solutionrelative:trabalhopoo\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|c:\\users\\joelo_k10i33y\\desktop\\trabalhopoo_novo\\trabalhopoo\\views\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|solutionrelative:trabalhopoo\\views\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|c:\\users\\joelo_k10i33y\\desktop\\trabalhopoo_novo\\trabalhopoo\\controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|solutionrelative:trabalhopoo\\controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|c:\\users\\joelo_k10i33y\\desktop\\trabalhopoo_novo\\trabalhopoo\\models\\addproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|solutionrelative:trabalhopoo\\models\\addproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|c:\\users\\joelo_k10i33y\\desktop\\trabalhopoo_novo\\trabalhopoo\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|solutionrelative:trabalhopoo\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|c:\\users\\joelo_k10i33y\\desktop\\trabalhopoo_novo\\trabalhopoo\\views\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|solutionrelative:trabalhopoo\\views\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|c:\\users\\joelo_k10i33y\\desktop\\trabalhopoo_novo\\trabalhopoo\\views\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|solutionrelative:trabalhopoo\\views\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|c:\\users\\joelo_k10i33y\\desktop\\trabalhopoo_novo\\trabalhopoo\\models\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|solutionrelative:trabalhopoo\\models\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|c:\\users\\joelo_k10i33y\\desktop\\trabalhopoo_novo\\trabalhopoo\\controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|solutionrelative:trabalhopoo\\controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|c:\\users\\joelo_k10i33y\\desktop\\trabalhopoo_novo\\trabalhopoo\\views\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DE26529-0F16-41C5-A380-F51F798AA836}|TrabalhoPOO\\TrabalhoPOO.csproj|solutionrelative:trabalhopoo\\views\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,59 +58,106 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "LoadProducts.cs",
+              "DocumentMoniker": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Models\\LoadProducts.cs",
+              "RelativeDocumentMoniker": "TrabalhoPOO\\Models\\LoadProducts.cs",
+              "ToolTip": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Models\\LoadProducts.cs",
+              "RelativeToolTip": "TrabalhoPOO\\Models\\LoadProducts.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T14:52:02.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "TrabalhoPOO\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "TrabalhoPOO\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T14:00:34.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AddProduct.cs",
+              "DocumentMoniker": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Models\\AddProduct.cs",
+              "RelativeDocumentMoniker": "TrabalhoPOO\\Models\\AddProduct.cs",
+              "ToolTip": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Models\\AddProduct.cs",
+              "RelativeToolTip": "TrabalhoPOO\\Models\\AddProduct.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwKUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T13:25:24.814Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "TrabalhoPOO\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "TrabalhoPOO\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T13:19:04.441Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "LoginForm.cs",
               "DocumentMoniker": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Views\\LoginForm.cs",
               "RelativeDocumentMoniker": "TrabalhoPOO\\Views\\LoginForm.cs",
               "ToolTip": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Views\\LoginForm.cs",
               "RelativeToolTip": "TrabalhoPOO\\Views\\LoginForm.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwCoAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwCQAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T18:54:53.39Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-03T18:54:53.39Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "AdminForm.cs",
               "DocumentMoniker": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Views\\AdminForm.cs",
               "RelativeDocumentMoniker": "TrabalhoPOO\\Views\\AdminForm.cs",
               "ToolTip": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Views\\AdminForm.cs",
               "RelativeToolTip": "TrabalhoPOO\\Views\\AdminForm.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAiwBcAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAADwv2UAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-03T18:53:13.904Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "RegisterController.cs",
               "DocumentMoniker": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Controllers\\RegisterController.cs",
               "RelativeDocumentMoniker": "TrabalhoPOO\\Controllers\\RegisterController.cs",
               "ToolTip": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Controllers\\RegisterController.cs",
               "RelativeToolTip": "TrabalhoPOO\\Controllers\\RegisterController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T17:31:47.791Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-03T17:31:47.791Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "RegisterModel.cs",
               "DocumentMoniker": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Models\\RegisterModel.cs",
               "RelativeDocumentMoniker": "TrabalhoPOO\\Models\\RegisterModel.cs",
               "ToolTip": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Models\\RegisterModel.cs",
               "RelativeToolTip": "TrabalhoPOO\\Models\\RegisterModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBEAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T17:24:59.757Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-03T17:24:59.757Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "Register.cs",
               "DocumentMoniker": "C:\\Users\\joelo_k10i33y\\Desktop\\TrabalhoPoo_Novo\\TrabalhoPOO\\Views\\Register.cs",
               "RelativeDocumentMoniker": "TrabalhoPOO\\Views\\Register.cs",
@@ -102,8 +165,7 @@
               "RelativeToolTip": "TrabalhoPOO\\Views\\Register.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAxwC8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T17:23:54.212Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-03T17:23:54.212Z"
             }
           ]
         }
