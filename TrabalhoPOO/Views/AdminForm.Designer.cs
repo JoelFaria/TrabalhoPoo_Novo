@@ -30,29 +30,28 @@
         {
             panel1 = new Panel();
             textBox1 = new TextBox();
-            pictureBox1 = new PictureBox();
             button4 = new Button();
-            textDescription = new TextBox();
-            textGuarantee = new TextBox();
-            textBrand = new TextBox();
-            textStock = new TextBox();
-            textPrice = new TextBox();
-            textName = new TextBox();
             comboBox1 = new ComboBox();
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
+            textName = new TextBox();
             label4 = new Label();
+            textPrice = new TextBox();
             label3 = new Label();
+            textStock = new TextBox();
             label2 = new Label();
+            textBrand = new TextBox();
             label1 = new Label();
+            textGuarantee = new TextBox();
+            textDescription = new TextBox();
+            textId = new TextBox();
+            label9 = new Label();
             label8 = new Label();
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
             dataGridView1 = new DataGridView();
-            textId = new TextBox();
-            label9 = new Label();
             textVRAM = new TextBox();
             textBaseClock = new TextBox();
             textBoostClock = new TextBox();
@@ -82,7 +81,6 @@
             FrequencylabelRAM = new Label();
             Latencylabel = new Label();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -90,11 +88,26 @@
             // 
             panel1.BackColor = Color.LavenderBlush;
             panel1.Controls.Add(textBox1);
-            panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(button4);
+            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(label7);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(textName);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(textPrice);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(textStock);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(textBrand);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(textGuarantee);
+            panel1.Controls.Add(textDescription);
+            panel1.Controls.Add(textId);
+            panel1.Controls.Add(label9);
             panel1.Location = new Point(-5, -2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(226, 655);
+            panel1.Size = new Size(226, 734);
             panel1.TabIndex = 0;
             // 
             // textBox1
@@ -102,28 +115,19 @@
             textBox1.BackColor = Color.LavenderBlush;
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(49, 52);
+            textBox1.Location = new Point(49, 23);
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
             textBox1.Size = new Size(123, 22);
             textBox1.TabIndex = 2;
             textBox1.Text = "Admin's Page";
-            // 
-            // pictureBox1
-            // 
-            //pictureBox1.Image = Properties.Resources.Desenho_PC_PNG;
-            pictureBox1.Location = new Point(34, 109);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(170, 163);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // button4
             // 
             button4.BackColor = Color.Cyan;
             button4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button4.Location = new Point(49, 580);
+            button4.Location = new Point(49, 653);
             button4.Name = "button4";
             button4.Size = new Size(118, 54);
             button4.TabIndex = 0;
@@ -131,52 +135,10 @@
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
-            // textDescription
-            // 
-            textDescription.Location = new Point(227, 224);
-            textDescription.Name = "textDescription";
-            textDescription.Size = new Size(141, 23);
-            textDescription.TabIndex = 15;
-            // 
-            // textGuarantee
-            // 
-            textGuarantee.Location = new Point(227, 496);
-            textGuarantee.Name = "textGuarantee";
-            textGuarantee.Size = new Size(141, 23);
-            textGuarantee.TabIndex = 13;
-            // 
-            // textBrand
-            // 
-            textBrand.Location = new Point(227, 428);
-            textBrand.Name = "textBrand";
-            textBrand.Size = new Size(141, 23);
-            textBrand.TabIndex = 12;
-            // 
-            // textStock
-            // 
-            textStock.Location = new Point(227, 356);
-            textStock.Name = "textStock";
-            textStock.Size = new Size(141, 23);
-            textStock.TabIndex = 11;
-            // 
-            // textPrice
-            // 
-            textPrice.Location = new Point(227, 288);
-            textPrice.Name = "textPrice";
-            textPrice.Size = new Size(141, 23);
-            textPrice.TabIndex = 10;
-            // 
-            // textName
-            // 
-            textName.Location = new Point(227, 154);
-            textName.Name = "textName";
-            textName.Size = new Size(141, 23);
-            textName.TabIndex = 9;
-            // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(227, 82);
+            comboBox1.Location = new Point(31, 122);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(151, 23);
             comboBox1.TabIndex = 8;
@@ -186,7 +148,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(227, 472);
+            label7.Location = new Point(31, 512);
             label7.Name = "label7";
             label7.Size = new Size(82, 21);
             label7.TabIndex = 6;
@@ -196,7 +158,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(227, 404);
+            label6.Location = new Point(31, 444);
             label6.Name = "label6";
             label6.Size = new Size(51, 21);
             label6.TabIndex = 5;
@@ -206,57 +168,117 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(227, 332);
+            label5.Location = new Point(31, 372);
             label5.Name = "label5";
             label5.Size = new Size(47, 21);
             label5.TabIndex = 4;
             label5.Text = "Stock";
             // 
+            // textName
+            // 
+            textName.Location = new Point(31, 194);
+            textName.Name = "textName";
+            textName.Size = new Size(141, 23);
+            textName.TabIndex = 9;
+            // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(227, 264);
+            label4.Location = new Point(31, 304);
             label4.Name = "label4";
             label4.Size = new Size(44, 21);
             label4.TabIndex = 3;
             label4.Text = "Price";
             // 
+            // textPrice
+            // 
+            textPrice.Location = new Point(31, 328);
+            textPrice.Name = "textPrice";
+            textPrice.Size = new Size(141, 23);
+            textPrice.TabIndex = 10;
+            // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(227, 200);
+            label3.Location = new Point(31, 240);
             label3.Name = "label3";
             label3.Size = new Size(89, 21);
             label3.TabIndex = 2;
             label3.Text = "Description";
             // 
+            // textStock
+            // 
+            textStock.Location = new Point(31, 396);
+            textStock.Name = "textStock";
+            textStock.Size = new Size(141, 23);
+            textStock.TabIndex = 11;
+            // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(227, 130);
+            label2.Location = new Point(31, 170);
             label2.Name = "label2";
             label2.Size = new Size(52, 21);
             label2.TabIndex = 1;
             label2.Text = "Name";
             // 
+            // textBrand
+            // 
+            textBrand.Location = new Point(31, 468);
+            textBrand.Name = "textBrand";
+            textBrand.Size = new Size(141, 23);
+            textBrand.TabIndex = 12;
+            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(227, 58);
+            label1.Location = new Point(31, 98);
             label1.Name = "label1";
             label1.Size = new Size(42, 21);
             label1.TabIndex = 0;
             label1.Text = "Type";
             // 
+            // textGuarantee
+            // 
+            textGuarantee.Location = new Point(31, 536);
+            textGuarantee.Name = "textGuarantee";
+            textGuarantee.Size = new Size(141, 23);
+            textGuarantee.TabIndex = 13;
+            // 
+            // textDescription
+            // 
+            textDescription.Location = new Point(31, 264);
+            textDescription.Name = "textDescription";
+            textDescription.Size = new Size(141, 23);
+            textDescription.TabIndex = 15;
+            // 
+            // textId
+            // 
+            textId.Location = new Point(31, 589);
+            textId.Name = "textId";
+            textId.ReadOnly = true;
+            textId.Size = new Size(141, 23);
+            textId.TabIndex = 21;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.Location = new Point(31, 565);
+            label9.Name = "label9";
+            label9.Size = new Size(23, 21);
+            label9.TabIndex = 22;
+            label9.Text = "Id";
+            // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(839, 82);
+            label8.Location = new Point(826, 79);
             label8.Name = "label8";
             label8.Size = new Size(130, 25);
             label8.TabIndex = 16;
@@ -266,7 +288,7 @@
             // 
             button1.BackColor = Color.Gold;
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(227, 578);
+            button1.Location = new Point(250, 651);
             button1.Name = "button1";
             button1.Size = new Size(90, 40);
             button1.TabIndex = 17;
@@ -278,7 +300,7 @@
             // 
             button2.BackColor = Color.YellowGreen;
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.Location = new Point(323, 578);
+            button2.Location = new Point(346, 651);
             button2.Name = "button2";
             button2.Size = new Size(80, 40);
             button2.TabIndex = 18;
@@ -290,7 +312,7 @@
             // 
             button3.BackColor = Color.LightCoral;
             button3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.Location = new Point(409, 578);
+            button3.Location = new Point(432, 651);
             button3.Name = "button3";
             button3.Size = new Size(80, 40);
             button3.TabIndex = 19;
@@ -301,47 +323,29 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(458, 130);
+            dataGridView1.Location = new Point(227, 129);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(850, 321);
+            dataGridView1.Size = new Size(1244, 321);
             dataGridView1.TabIndex = 20;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // textId
-            // 
-            textId.Location = new Point(227, 549);
-            textId.Name = "textId";
-            textId.ReadOnly = true;
-            textId.Size = new Size(141, 23);
-            textId.TabIndex = 21;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(227, 525);
-            label9.Name = "label9";
-            label9.Size = new Size(23, 21);
-            label9.TabIndex = 22;
-            label9.Text = "Id";
-            // 
             // textVRAM
             // 
-            textVRAM.Location = new Point(572, 549);
+            textVRAM.Location = new Point(594, 653);
             textVRAM.Name = "textVRAM";
             textVRAM.Size = new Size(100, 23);
             textVRAM.TabIndex = 23;
             // 
             // textBaseClock
             // 
-            textBaseClock.Location = new Point(734, 549);
+            textBaseClock.Location = new Point(756, 653);
             textBaseClock.Name = "textBaseClock";
             textBaseClock.Size = new Size(100, 23);
             textBaseClock.TabIndex = 24;
             // 
             // textBoostClock
             // 
-            textBoostClock.Location = new Point(869, 549);
+            textBoostClock.Location = new Point(891, 653);
             textBoostClock.Name = "textBoostClock";
             textBoostClock.Size = new Size(100, 23);
             textBoostClock.TabIndex = 25;
@@ -349,7 +353,7 @@
             // VRAMlabel
             // 
             VRAMlabel.AutoSize = true;
-            VRAMlabel.Location = new Point(572, 525);
+            VRAMlabel.Location = new Point(594, 629);
             VRAMlabel.Name = "VRAMlabel";
             VRAMlabel.Size = new Size(43, 15);
             VRAMlabel.TabIndex = 26;
@@ -358,7 +362,7 @@
             // Baselabel
             // 
             Baselabel.AutoSize = true;
-            Baselabel.Location = new Point(734, 525);
+            Baselabel.Location = new Point(756, 629);
             Baselabel.Name = "Baselabel";
             Baselabel.Size = new Size(64, 15);
             Baselabel.TabIndex = 27;
@@ -367,7 +371,7 @@
             // Boostlabel
             // 
             Boostlabel.AutoSize = true;
-            Boostlabel.Location = new Point(869, 525);
+            Boostlabel.Location = new Point(891, 629);
             Boostlabel.Name = "Boostlabel";
             Boostlabel.Size = new Size(70, 15);
             Boostlabel.TabIndex = 28;
@@ -375,21 +379,21 @@
             // 
             // textCache
             // 
-            textCache.Location = new Point(572, 549);
+            textCache.Location = new Point(594, 653);
             textCache.Name = "textCache";
             textCache.Size = new Size(100, 23);
             textCache.TabIndex = 29;
             // 
             // textSocket
             // 
-            textSocket.Location = new Point(734, 549);
+            textSocket.Location = new Point(756, 653);
             textSocket.Name = "textSocket";
             textSocket.Size = new Size(100, 23);
             textSocket.TabIndex = 30;
             // 
             // textMem
             // 
-            textMem.Location = new Point(869, 549);
+            textMem.Location = new Point(891, 653);
             textMem.Name = "textMem";
             textMem.Size = new Size(100, 23);
             textMem.TabIndex = 31;
@@ -397,7 +401,7 @@
             // CacheLabel
             // 
             CacheLabel.AutoSize = true;
-            CacheLabel.Location = new Point(572, 525);
+            CacheLabel.Location = new Point(594, 629);
             CacheLabel.Name = "CacheLabel";
             CacheLabel.Size = new Size(43, 15);
             CacheLabel.TabIndex = 32;
@@ -406,7 +410,7 @@
             // SocketLabel
             // 
             SocketLabel.AutoSize = true;
-            SocketLabel.Location = new Point(734, 525);
+            SocketLabel.Location = new Point(756, 629);
             SocketLabel.Name = "SocketLabel";
             SocketLabel.Size = new Size(45, 15);
             SocketLabel.TabIndex = 33;
@@ -415,7 +419,7 @@
             // MemoryLabel
             // 
             MemoryLabel.AutoSize = true;
-            MemoryLabel.Location = new Point(869, 525);
+            MemoryLabel.Location = new Point(891, 629);
             MemoryLabel.Name = "MemoryLabel";
             MemoryLabel.Size = new Size(100, 15);
             MemoryLabel.TabIndex = 34;
@@ -424,7 +428,7 @@
             // FrequencyLabel
             // 
             FrequencyLabel.AutoSize = true;
-            FrequencyLabel.Location = new Point(1013, 525);
+            FrequencyLabel.Location = new Point(1035, 629);
             FrequencyLabel.Name = "FrequencyLabel";
             FrequencyLabel.Size = new Size(65, 15);
             FrequencyLabel.TabIndex = 35;
@@ -432,7 +436,7 @@
             // 
             // textFrequency
             // 
-            textFrequency.Location = new Point(1013, 549);
+            textFrequency.Location = new Point(1035, 653);
             textFrequency.Name = "textFrequency";
             textFrequency.Size = new Size(100, 23);
             textFrequency.TabIndex = 36;
@@ -440,7 +444,7 @@
             // SocketLabelMB
             // 
             SocketLabelMB.AutoSize = true;
-            SocketLabelMB.Location = new Point(572, 525);
+            SocketLabelMB.Location = new Point(594, 629);
             SocketLabelMB.Name = "SocketLabelMB";
             SocketLabelMB.Size = new Size(45, 15);
             SocketLabelMB.TabIndex = 37;
@@ -449,7 +453,7 @@
             // MemorySupportLabelMB
             // 
             MemorySupportLabelMB.AutoSize = true;
-            MemorySupportLabelMB.Location = new Point(734, 525);
+            MemorySupportLabelMB.Location = new Point(756, 629);
             MemorySupportLabelMB.Name = "MemorySupportLabelMB";
             MemorySupportLabelMB.Size = new Size(97, 15);
             MemorySupportLabelMB.TabIndex = 38;
@@ -458,7 +462,7 @@
             // FormFactorLabel
             // 
             FormFactorLabel.AutoSize = true;
-            FormFactorLabel.Location = new Point(869, 525);
+            FormFactorLabel.Location = new Point(891, 629);
             FormFactorLabel.Name = "FormFactorLabel";
             FormFactorLabel.Size = new Size(71, 15);
             FormFactorLabel.TabIndex = 39;
@@ -466,49 +470,49 @@
             // 
             // textSocketMB
             // 
-            textSocketMB.Location = new Point(572, 549);
+            textSocketMB.Location = new Point(594, 653);
             textSocketMB.Name = "textSocketMB";
             textSocketMB.Size = new Size(100, 23);
             textSocketMB.TabIndex = 40;
             // 
             // textMemorySupport
             // 
-            textMemorySupport.Location = new Point(734, 549);
+            textMemorySupport.Location = new Point(756, 653);
             textMemorySupport.Name = "textMemorySupport";
             textMemorySupport.Size = new Size(100, 23);
             textMemorySupport.TabIndex = 41;
             // 
             // textFormFactor
             // 
-            textFormFactor.Location = new Point(869, 549);
+            textFormFactor.Location = new Point(891, 653);
             textFormFactor.Name = "textFormFactor";
             textFormFactor.Size = new Size(100, 23);
             textFormFactor.TabIndex = 42;
             // 
             // textCapacity
             // 
-            textCapacity.Location = new Point(572, 549);
+            textCapacity.Location = new Point(594, 653);
             textCapacity.Name = "textCapacity";
             textCapacity.Size = new Size(100, 23);
             textCapacity.TabIndex = 43;
             // 
             // textType
             // 
-            textType.Location = new Point(734, 549);
+            textType.Location = new Point(756, 653);
             textType.Name = "textType";
             textType.Size = new Size(100, 23);
             textType.TabIndex = 44;
             // 
             // textFrequencyRAM
             // 
-            textFrequencyRAM.Location = new Point(869, 549);
+            textFrequencyRAM.Location = new Point(891, 653);
             textFrequencyRAM.Name = "textFrequencyRAM";
             textFrequencyRAM.Size = new Size(100, 23);
             textFrequencyRAM.TabIndex = 45;
             // 
             // textLatency
             // 
-            textLatency.Location = new Point(1013, 549);
+            textLatency.Location = new Point(1035, 653);
             textLatency.Name = "textLatency";
             textLatency.Size = new Size(100, 23);
             textLatency.TabIndex = 46;
@@ -516,7 +520,7 @@
             // Capacitylabel
             // 
             Capacitylabel.AutoSize = true;
-            Capacitylabel.Location = new Point(572, 525);
+            Capacitylabel.Location = new Point(594, 629);
             Capacitylabel.Name = "Capacitylabel";
             Capacitylabel.Size = new Size(56, 15);
             Capacitylabel.TabIndex = 47;
@@ -525,7 +529,7 @@
             // Typelabel
             // 
             Typelabel.AutoSize = true;
-            Typelabel.Location = new Point(734, 525);
+            Typelabel.Location = new Point(756, 629);
             Typelabel.Name = "Typelabel";
             Typelabel.Size = new Size(35, 15);
             Typelabel.TabIndex = 48;
@@ -534,7 +538,7 @@
             // FrequencylabelRAM
             // 
             FrequencylabelRAM.AutoSize = true;
-            FrequencylabelRAM.Location = new Point(869, 525);
+            FrequencylabelRAM.Location = new Point(891, 629);
             FrequencylabelRAM.Name = "FrequencylabelRAM";
             FrequencylabelRAM.Size = new Size(65, 15);
             FrequencylabelRAM.TabIndex = 49;
@@ -543,7 +547,7 @@
             // Latencylabel
             // 
             Latencylabel.AutoSize = true;
-            Latencylabel.Location = new Point(1013, 525);
+            Latencylabel.Location = new Point(1035, 629);
             Latencylabel.Name = "Latencylabel";
             Latencylabel.Size = new Size(51, 15);
             Latencylabel.TabIndex = 50;
@@ -554,7 +558,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Menu;
-            ClientSize = new Size(1412, 644);
+            ClientSize = new Size(1520, 733);
             Controls.Add(Latencylabel);
             Controls.Add(FrequencylabelRAM);
             Controls.Add(Typelabel);
@@ -583,33 +587,16 @@
             Controls.Add(textBoostClock);
             Controls.Add(textBaseClock);
             Controls.Add(textVRAM);
-            Controls.Add(label9);
-            Controls.Add(textId);
             Controls.Add(dataGridView1);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label8);
-            Controls.Add(textDescription);
             Controls.Add(panel1);
-            Controls.Add(textGuarantee);
-            Controls.Add(label1);
-            Controls.Add(textBrand);
-            Controls.Add(label2);
-            Controls.Add(textStock);
-            Controls.Add(label3);
-            Controls.Add(textPrice);
-            Controls.Add(label4);
-            Controls.Add(textName);
-            Controls.Add(label5);
-            Controls.Add(comboBox1);
-            Controls.Add(label6);
-            Controls.Add(label7);
             Name = "AdminForm";
             Text = "AdminForm";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -640,7 +627,6 @@
         private TextBox textId;
         private Label label9;
         private TextBox textBox1;
-        private PictureBox pictureBox1;
         private Button button4;
         private TextBox textVRAM;
         private TextBox textBaseClock;

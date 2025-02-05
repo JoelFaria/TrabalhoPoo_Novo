@@ -16,31 +16,58 @@ namespace TrabalhoPOO.Models
 
         private string connectionString = "Data Source=JOELFARIA\\SQLEXPRESS;Initial Catalog=LoginApp;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
-        public DataTable LoadStockData()
+        public DataTable GetInfo()
         {
-            DataTable dataTable = new DataTable();
-            string query = "SELECT * FROM StockTable";
-
-            using (SqlConnection con = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                try
+                string query = @"
+                SELECT 
+                s.Id,
+                s.Name,
+                s.Description,
+                s.Price,
+                s.Type AS StockType,         -- Coluna do StockTable
+                s.Stock,
+                s.Brand,
+                s.Guarantee,
+                -- Colunas da tabela Ram (se houver)
+                r.Capacity,
+                r.Type AS RamType,           -- Diferencia o ""Type"" da RAM
+                r.Frequency AS RamFrequency,
+                r.Latency,
+                -- Colunas da tabela Cpu
+                c.Cache,
+                c.Socket AS CpuSocket,
+                c.MemorySupport AS CpuMemorySupport,
+                c.Frequency AS CpuFrequency,
+                -- Colunas da tabela Gpu
+                g.VRAM,
+                g.BaseClock,
+                g.OverClock AS BoostClock,   -- Aqui, alias para o clock de boost
+                -- Colunas da tabela Motherboard
+                m.Socket AS MB_Socket,
+                m.MemorySupport AS MB_MemorySupport,
+                m.FormFactor
+            FROM StockTable s
+            LEFT JOIN Ram r ON s.Id = r.ProductId
+            LEFT JOIN Cpu c ON s.Id = c.ProductId
+            LEFT JOIN Gpu g ON s.Id = g.ProductId
+            LEFT JOIN Motherboard m ON s.Id = m.ProductId;
+            ";
+
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    con.Open();
-                    SqlDataAdapter adapter = new SqlDataAdapter(query, con);
-                    adapter.Fill(dataTable);
-                }
-                catch (Exception ex)
-                {
-                    // Em vez de MessageBox (que é parte da View), lançamos a exceção ou tratamos de outra forma.
-                    throw new Exception("Erro ao carregar dados: " + ex.Message);
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    return dt;
                 }
             }
-            return dataTable;
         }
-
-       
     }
-
 }
+
 
 

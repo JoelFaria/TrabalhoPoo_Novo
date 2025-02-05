@@ -9,7 +9,7 @@ namespace TrabalhoPOO.Views
     public partial class Register : Form
     {
       
-        Register registerClass = new Register();
+       
 
         public Register()
         {
@@ -32,8 +32,10 @@ namespace TrabalhoPOO.Views
 
                 if (isRegistered) 
                 {
+                    Login login = new Login();
                     MessageBox.Show("Registro efetuado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    this.Hide();
+                    login.Show();
                 }
                 else
                 {

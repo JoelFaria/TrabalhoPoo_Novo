@@ -37,20 +37,10 @@ namespace TrabalhoPOO.Views
             if (isValid)
             {
                 MessageBox.Show("Login bem-sucedido!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                if (username == "admin" && password == "admin")
-                {
+              
                     AdminForm adminForm = new AdminForm();
                     adminForm.Show();
                     this.Hide();
-                }
-                else
-                {
-                    Items items = new Items();
-                    items.Show();
-                    this.Hide();
-
-                }
             }
             else
             {

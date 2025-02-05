@@ -21,7 +21,11 @@ namespace TrabalhoPOO.Controllers
             loadProducts = new LoadProducts();
         }
 
-        
-        
+        public DataTable ListarProdutos()
+        {
+            return loadProducts.GetInfo();
+        }
+
+       
     }
 }

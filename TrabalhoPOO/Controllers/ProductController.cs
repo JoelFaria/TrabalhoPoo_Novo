@@ -18,7 +18,6 @@ namespace TrabalhoPOO.Controllers
             this.repo = new AddProduct();
         }
 
-
         public bool AddNewProduct(Produto produto)
         {
             // Adiciona o produto principal à tabela StockTable e obtém o ID gerado
@@ -67,6 +66,9 @@ namespace TrabalhoPOO.Controllers
 
             return true;
         }
+
+
+     
     }
 }
 

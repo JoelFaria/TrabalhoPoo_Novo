@@ -21,5 +21,7 @@ namespace TrabalhoPOO.Controllers
         {
             return loginModel.ValidateUser(username, password);
         }
+
+
     }
 }

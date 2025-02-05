@@ -5,6 +5,7 @@ using Microsoft.Data.SqlClient;
 using TrabalhoPOO.Models;
 using TrabalhoPOO;
 using TrabalhoPOO.Controllers;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TrabalhoPOO.Views
 {
@@ -13,7 +14,8 @@ namespace TrabalhoPOO.Views
     {
 
         private ProductController produtoController;
-        private LoadProducts LoadProducts;
+        private StockController stockController;
+        private DeleteController deleteController;
 
         public AdminForm()
         {
@@ -25,11 +27,26 @@ namespace TrabalhoPOO.Views
             comboBox1.Items.Add("Motherboard");
 
             produtoController = new ProductController();
+            stockController = new StockController();
+            deleteController = new DeleteController();
 
             HideFields();
 
-            LoadProducts.LoadStockData();
+            CarregarDados();
 
+
+        }
+
+        private void CarregarDados()
+        {
+            try
+            {
+                dataGridView1.DataSource = stockController.ListarProdutos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao carregar dados: " + ex.Message);
+            }
         }
 
 
@@ -47,7 +64,7 @@ namespace TrabalhoPOO.Views
 
         #region Metodo de salvar produtos
 
-       
+
 
         /// <summary>
         /// Manipula o evento de clique do botão 2. 
@@ -61,7 +78,7 @@ namespace TrabalhoPOO.Views
             {
                 string tipo = comboBox1.SelectedItem?.ToString();
 
-                if (string.IsNullOrEmpty(tipo)) 
+                if (string.IsNullOrEmpty(tipo))
                 {
                     MessageBox.Show("Selecione um tipo de produto.");
                 }
@@ -117,7 +134,7 @@ namespace TrabalhoPOO.Views
                 if (sucesso)
                 {
                     MessageBox.Show("Produto adicionado com sucesso!");
-                    LoadProducts.LoadStockData(); // Atualiza a interface com os dados do estoque
+                    CarregarDados(); // Atualiza a interface com os dados do estoque
                 }
                 else
                 {
@@ -139,7 +156,86 @@ namespace TrabalhoPOO.Views
         /// <param name="e">Os dados do evento.</param>
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            try
+            {
+                // Exemplo: Recupera o tipo do produto (assumindo que o comboBox contém as opções "GPU", "CPU", "Motherboard" e "RAM")
+                string? tipo = comboBox1.SelectedItem?.ToString();
+                if (string.IsNullOrEmpty(tipo))
+                {
+                    MessageBox.Show("Selecione um tipo de produto.");
+                    return;
+                }
+
+                // Recupera o ID do produto a ser atualizado (pode estar em um campo oculto ou selecionado de um DataGridView)
+                int id = int.Parse(textId.Text);
+
+                // Dados comuns para todos os produtos
+                string nome = textName.Text;
+                string descricao = textDescription.Text;
+                double preco = double.Parse(textPrice.Text);
+                int stock = int.Parse(textStock.Text);
+                string marca = textBrand.Text;
+                int garantia = int.Parse(textGuarantee.Text);
+
+                // Instancia o objeto do tipo correto
+                Produto? produto = null;
+
+                switch (tipo.ToLower())
+                {
+                    case "gpu":
+                        int vram = int.Parse(textVRAM.Text);
+                        int baseClock = int.Parse(textBaseClock.Text);
+                        int overClock = int.Parse(textBoostClock.Text);
+                        produto = new Gpu(vram, baseClock, overClock, nome, descricao, preco, tipo, stock, marca, garantia);
+                        break;
+
+                    case "cpu":
+                        int cache = int.Parse(textCache.Text);
+                        string socket = textSocket.Text;
+                        string memorySupport = textMem.Text;
+                        int frequency = int.Parse(textFrequency.Text);
+                        produto = new Cpu(cache, socket, memorySupport, frequency, nome, descricao, preco, tipo, stock, marca, garantia);
+                        break;
+
+                    case "motherboard":
+                        string socketMB = textSocketMB.Text;
+                        string memorySupportMB = textMemorySupport.Text;
+                        string formFactor = textFormFactor.Text;
+                        produto = new Motherboard(socketMB, memorySupportMB, formFactor, nome, descricao, preco, tipo, stock, marca, garantia);
+                        break;
+
+                    case "ram":
+                        int capacity = int.Parse(textCapacity.Text);
+                        string typeRam = textType.Text;
+                        int frequencyRam = int.Parse(textFrequencyRAM.Text);
+                        int latency = int.Parse(textLatency.Text);
+                        produto = new RAM(capacity, typeRam, frequencyRam, latency, nome, descricao, preco, tipo, stock, marca, garantia);
+                        break;
+
+                    default:
+                        MessageBox.Show("Tipo de produto inválido.");
+                        return;
+                }
+
+                // Cria a instância do controller e chama o método de atualização
+                Update up = new Update();
+                bool sucesso = up.UpdateProduct(produto, id);
+
+                if (sucesso)
+                {
+                    MessageBox.Show("Produto atualizado com sucesso!");
+                    // Atualize os dados na interface, por exemplo, recarregando o DataGridView:
+                    CarregarDados();
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao atualizar o produto.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
         }
 
         /// <summary>
@@ -149,8 +245,43 @@ namespace TrabalhoPOO.Views
         /// <param name="e">Os dados do evento.</param>
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                // Verifica se há alguma linha selecionada no DataGridView
+                if (dataGridView1.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Selecione um produto para excluir.");
+                    return;
+                }
+
+                // Obtém o ID do produto selecionado
+                int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["Id"].Value);
+
+                // Confirma a exclusão
+                DialogResult resultado = MessageBox.Show("Tem certeza que deseja excluir o produto selecionado?",
+                                                          "Confirmar Exclusão",
+                                                          MessageBoxButtons.YesNo,
+                                                          MessageBoxIcon.Question);
+
+                if (resultado == DialogResult.Yes)
+                {
+                    // Instancia a classe Delete e chama o método para remover o produto
+                    Delete deleteModel = new Delete();
+                    bool sucesso = deleteModel.DeleteProduct(id);
+
+                    if (sucesso)
+                    {
+                        MessageBox.Show("Produto excluído com sucesso!");
+                        CarregarDados(); // Atualiza a listagem
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao excluir o produto: " + ex.Message);
+            }
         }
+
 
         #endregion
 
@@ -175,14 +306,14 @@ namespace TrabalhoPOO.Views
             textFrequency.Visible = false;
             CacheLabel.Visible = false;
             SocketLabel.Visible = false;
-            MemoryLabel.Visible = false;  
+            MemoryLabel.Visible = false;
             FrequencyLabel.Visible = false;
 
             textSocketMB.Visible = false;
-            textMemorySupport.Visible = false;  
+            textMemorySupport.Visible = false;
             textFormFactor.Visible = false;
             SocketLabelMB.Visible = false;
-            MemorySupportLabelMB.Visible = false; 
+            MemorySupportLabelMB.Visible = false;
             FormFactorLabel.Visible = false;
 
             textFrequencyRAM.Visible = false;
@@ -255,48 +386,6 @@ namespace TrabalhoPOO.Views
 
         #region Metodo de carregar detalhes de produtos
 
-        /// <summary>
-        /// Método para carregar os dados do estoque
-        /// </summary>
-
-        
-        
-        /// <summary>
-        /// Método para carregar os detalhes de uma GPU
-        /// </summary>
-        /// <param name="productId"></param>
-      
-        private void LoadGpuDetails(int productId)
-        {
-          
-        }
-
-        /// <summary>
-        /// Método para carregar os detalhes de uma CPU
-        /// </summary>
-        /// <param name="productId"></param>
-
-        private void LoadCpuDetails(int productId)
-        {
-            
-        }
-        /// <summary>
-        /// Método para carregar os detalhes de uma placa-mãe
-        /// </summary>
-        /// <param name="productId"></param>
-
-        private void LoadMotherboardDetails(int productId)
-        {
-           
-        }
-        /// <summary>
-        /// Método para carregar os detalhes de uma RAM
-        /// </summary>
-        /// <param name="productId"></param>
-        private void LoadRamDetails(int productId)
-        {
-           
-        }
 
         /// <summary>
         /// Evento para carregar os detalhes do produto selecionado no DataGridView
@@ -305,9 +394,53 @@ namespace TrabalhoPOO.Views
         /// <param name="e"></param>
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            if (e.RowIndex >= 0) // Garante que não está a clicar no cabeçalho
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+
+                comboBox1.SelectedItem = row.Cells["StockType"].Value?.ToString();
+                textName.Text = row.Cells["Name"].Value?.ToString();
+                textDescription.Text = row.Cells["Description"].Value?.ToString();
+                textPrice.Text = row.Cells["Price"].Value?.ToString();
+                textStock.Text = row.Cells["Stock"].Value?.ToString();
+                textBrand.Text = row.Cells["Brand"].Value?.ToString();
+                textGuarantee.Text = row.Cells["Guarantee"].Value?.ToString();
+                textId.Text = row.Cells["Id"].Value?.ToString();
+
+                if(comboBox1.SelectedItem?.ToString() == "Gpu")
+                {
+                    textVRAM.Text = row.Cells["VRAM"].Value?.ToString();
+                    textBaseClock.Text = row.Cells["BaseClock"].Value?.ToString();
+                    textBoostClock.Text = row.Cells["BoostClock"].Value?.ToString();
+                }
+                else if (comboBox1.SelectedItem?.ToString() == "Cpu")
+                {
+                    textCache.Text = row.Cells["Cache"].Value?.ToString();
+                    textSocket.Text = row.Cells["CpuSocket"].Value?.ToString();
+                    textMem.Text = row.Cells["CpuMemorySupport"].Value?.ToString();
+                    textFrequency.Text = row.Cells["CpuFrequency"].Value?.ToString();
+                }
+                else if (comboBox1.SelectedItem?.ToString() == "Motherboard")
+                {
+                    textSocketMB.Text = row.Cells["MB_Socket"].Value?.ToString();
+                    textMemorySupport.Text = row.Cells["MB_MemorySupport"].Value?.ToString();
+                    textFormFactor.Text = row.Cells["FormFactor"].Value?.ToString();
+                }
+                else if (comboBox1.SelectedItem?.ToString() == "RAM")
+                {
+                    textFrequencyRAM.Text = row.Cells["RamFrequency"].Value?.ToString();
+                    textCapacity.Text = row.Cells["Capacity"].Value?.ToString();
+                    textType.Text = row.Cells["RamType"].Value?.ToString();
+                    textLatency.Text = row.Cells["Latency"].Value?.ToString();
+                }
+            }
         }
 
         #endregion
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
