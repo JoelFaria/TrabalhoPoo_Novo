@@ -37,7 +37,7 @@ namespace TrabalhoPOO.Models
             }
         }
 
-        public bool AddCPU(Cpu cpu, int ProductId)
+        public bool AddCpu(Cpu cpu, int ProductId)
         {
             try
             {
@@ -46,8 +46,8 @@ namespace TrabalhoPOO.Models
                 {
                     conn.Open();
                     // Consulta SQL para inserir uma nova CPU
-                    string query = "INSERT INTO Cpu (ProductId, Cache, Socket, MemorySupport, Frequency) " +
-                                   "VALUES (@ProductId, @Cache, @Socket, @MemorySupport, @Frequency)";
+                    string query = "INSERT INTO Cpu (ProductId, [Cache], Socket, MemorySupport, Frequency) " +
+                          "VALUES (@ProductId, @Cache, @Socket, @MemorySupport, @Frequency)";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
@@ -64,8 +64,9 @@ namespace TrabalhoPOO.Models
                 }
                 return true; // Retorna true se a inserção for bem-sucedida
             }
-            catch
+            catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
                 return false; // Retorna false se ocorrer um erro
             }
         }
@@ -97,7 +98,8 @@ namespace TrabalhoPOO.Models
                 return true; // Retorna true se a inserção for bem-sucedida
             }
             catch
-            {
+            {   
+                
                 return false; // Retorna false se ocorrer um erro
             }
         }

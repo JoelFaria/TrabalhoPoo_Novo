@@ -101,7 +101,6 @@ namespace TrabalhoPOO.Views
                         int boostclock = int.Parse(textBoostClock.Text);
                         Gpu gpu = new Gpu(vram, baseclock, boostclock, nome, descricao, preco, tipo, stock, marca, garantia);
                         sucesso = produtoController.AddNewProduct(gpu);
-
                         break;
 
                     case "cpu":

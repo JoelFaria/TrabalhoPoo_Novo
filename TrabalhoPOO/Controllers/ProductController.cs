@@ -36,7 +36,7 @@ namespace TrabalhoPOO.Controllers
             }
             else if (produto is Cpu cpu)
             {
-                sucesso = repo.AddCPU(cpu, productId);
+                sucesso = repo.AddCpu(cpu, productId);
                 if (!sucesso)
                 {
                     return false;
