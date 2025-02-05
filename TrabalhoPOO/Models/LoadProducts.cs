@@ -26,13 +26,13 @@ namespace TrabalhoPOO.Models
                 s.Name,
                 s.Description,
                 s.Price,
-                s.Type AS StockType,         -- Coluna do StockTable
+                s.Type AS StockType,        
                 s.Stock,
                 s.Brand,
                 s.Guarantee,
-                -- Colunas da tabela Ram (se houver)
+                -- Colunas da tabela Ram
                 r.Capacity,
-                r.Type AS RamType,           -- Diferencia o ""Type"" da RAM
+                r.Type AS RamType,          
                 r.Frequency AS RamFrequency,
                 r.Latency,
                 -- Colunas da tabela Cpu
@@ -43,7 +43,7 @@ namespace TrabalhoPOO.Models
                 -- Colunas da tabela Gpu
                 g.VRAM,
                 g.BaseClock,
-                g.OverClock AS BoostClock,   -- Aqui, alias para o clock de boost
+                g.OverClock AS BoostClock,  
                 -- Colunas da tabela Motherboard
                 m.Socket AS MB_Socket,
                 m.MemorySupport AS MB_MemorySupport,
