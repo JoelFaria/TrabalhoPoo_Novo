@@ -7,19 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
+using TrabalhoPOO.Data;
 
 namespace TrabalhoPOO.Models
 {
     public class RegisterModel
     {
-        private string connectionString = "Data Source=JOELFARIA\\SQLEXPRESS;Initial Catalog=LoginApp;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+        
         private string query = "INSERT INTO LoginTable (username, password, email) VALUES (@Username, @Password, @Email)";
 
         public bool RegisterUser(User user)
         {
+            var db = DataConnection.Instance;
+            db.Open();
+
             try
             {
-                using (SqlConnection con = new SqlConnection(connectionString))
+                using (SqlConnection con = new SqlConnection(db.Connection.ConnectionString))
                 {
                     con.Open();
                     using (SqlCommand cmd = new SqlCommand(query, con))
@@ -41,6 +45,10 @@ namespace TrabalhoPOO.Models
             {
                 // Lança uma exceção para ser tratada no Controller ou View
                 throw new Exception("Erro ao registrar o usuário no banco de dados.", ex);
+            }
+            finally
+            {
+                db.Close();
             }
         }
     }

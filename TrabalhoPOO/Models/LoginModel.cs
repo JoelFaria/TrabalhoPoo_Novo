@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
+using TrabalhoPOO.Data;
 
 namespace TrabalhoPOO.Models
 {
     public class LoginModel
     {
-        private string connectionString = "Data Source=JOELFARIA\\SQLEXPRESS;Initial Catalog=LoginApp;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
-
         public bool ValidateUser(string username, string password)
         {
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
@@ -18,9 +17,12 @@ namespace TrabalhoPOO.Models
                 return false;
             }
 
+            var db = DataConnection.Instance;
+            db.Open();
+
             try
             {
-                using (SqlConnection con = new SqlConnection(connectionString))
+                using (SqlConnection con = new SqlConnection(db.Connection.ConnectionString))
                 {
                     string query = "SELECT COUNT(*) FROM LoginTable WHERE Username = @Username AND Password = @Password";
                     SqlCommand cmd = new SqlCommand(query, con);
@@ -37,6 +39,10 @@ namespace TrabalhoPOO.Models
             catch (Exception ex)
             {
                 throw new Exception("Erro ao verificar usuário", ex);
+            }
+            finally
+            {
+                db.Close();
             }
         }
     }

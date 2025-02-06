@@ -5,18 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 using TrabalhoPOO.Models;
 using Microsoft.Data.SqlClient;
+using TrabalhoPOO.Data;
 
 namespace TrabalhoPOO.Models
 {
     public class Delete
     {
-        private string connectionString = "Data Source=JOELFARIA\\SQLEXPRESS;Initial Catalog=LoginApp;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
-
         public bool DeleteProduct(int id)
         {
+            var db = DataConnection.Instance;
+            db.Open();
+
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlConnection conn = new SqlConnection(db.Connection.ConnectionString))
                 {
                     conn.Open();
 
@@ -71,6 +73,10 @@ namespace TrabalhoPOO.Models
             {
                 // Registar ou lançar a exceção
                 throw new ArgumentException("Erro ao eliminar o produto.", ex);
+            }
+            finally
+            {
+                db.Close();
             }
         }
     }

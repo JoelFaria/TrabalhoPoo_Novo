@@ -5,19 +5,23 @@ using System.Text;
 using System.Threading.Tasks;
 using TrabalhoPOO.Models;
 using Microsoft.Data.SqlClient;
+using TrabalhoPOO.Data;
 
 namespace TrabalhoPOO.Models
 {
     public class Update
     {
-        private string connectionString = "Data Source=JOELFARIA\\SQLEXPRESS;Initial Catalog=LoginApp;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+       
 
         public bool UpdateProduct(Produto produto, int Id)
         {
+            var db = DataConnection.Instance;
+            db.Open();
+
             try
             {
                 // Estabelece a conexão com o banco de dados
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlConnection conn = new SqlConnection(db.Connection.ConnectionString))
                 {
                     conn.Open();
 
@@ -110,6 +114,10 @@ namespace TrabalhoPOO.Models
             {
                 // Lança uma exceção se ocorrer um erro durante a atualização
                 throw new Exception("Erro ao atualizar o produto.", ex);
+            }
+            finally
+            {
+                db.Close();
             }
         }
     }
